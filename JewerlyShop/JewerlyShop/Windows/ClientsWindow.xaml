@@ -1,0 +1,163 @@
+﻿<Window x:Class="JewerlyShop.ClientsWindow" Icon="\Resources\icon.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JewerlyShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Клиенты" Height="600" Width="850" FontFamily="Arial Black" Foreground="White" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="305*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="363*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Column="1" Background="#708090"></Grid>
+        <Grid  Grid.Column="0" Background="#708090"></Grid>
+        <Grid Grid.Column="0" Grid.Row="1" Background="#e3e7e8"></Grid>
+        <TextBlock Text="Jewerly" Grid.Column="0" FontSize="30" HorizontalAlignment="Center" Margin="0 15 0 0"></TextBlock>
+        <TextBlock Text="Клиенты" Grid.Column="1" FontSize="30" HorizontalAlignment="Center" Margin="0 15 0 0"></TextBlock>
+        <Grid  Grid.Row="2" Grid.Column="0" Background="#708090"></Grid>
+        <Grid  Grid.Row="2" Grid.Column="1" Background="#708090"></Grid>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button x:Name="MainBtn" Width="180" Height="40" Margin="0 25 0 0" Content="Главная" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="MainBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ProductsBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Товары" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="ProductsBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ProvidersBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Поставщики" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="ProvidersBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="SalesBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Продажи" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="SalesBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="Reference" Width="180" Height="40" Margin="0 30 0 0" Content="Справка" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="Reference_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ExitBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Выход" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="ExitBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <TextBox x:Name="SearchText" TextChanged="SearchText_TextChanged" PreviewMouseLeftButtonDown="SearchText_PreviewMouseLeftButtonDown" LostFocus="SearchText_LostFocus" Grid.Column="1" Grid.Row="1" Width="290" Height="30" Margin="-315 -380 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="14"></TextBox>
+        <TextBlock x:Name="SearchTextHolder" Grid.Column="1" Grid.Row="1" Text="Введите для поиска" IsHitTestVisible="False" Margin="20 -380 0 0" FontSize="15" VerticalAlignment="Center" Foreground="Black"/>
+        <Button x:Name="AddReport" Grid.Row="1" Grid.Column="1" Width="110" Height="30" Margin="240 -380 0 0" Content="Отчёт PDF" Foreground="White" FontSize="14" Click="AddReport_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="AddReportExcel" Grid.Row="1" Grid.Column="1" Width="110" Height="30" Margin="484 -380 0 0" Content="Отчёт Excel" Foreground="White" FontSize="14" Click="AddReportExcel_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <Button x:Name="AddClientBtn" Width="150" Height="30" Margin="17 395 60 0" Content="Добавить" Foreground="White" FontSize="14" Click="AddClientBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="EditClientBtn" Width="150" Height="30" Margin="17 395 60 0" Content="Редактировать" Foreground="White" FontSize="14" Click="EditClientBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="Remove" Width="150" Height="30" Margin="17 395 50 0" Content="Удалить" Foreground="White" FontSize="14" Click="Remove_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+        <DataGrid x:Name="СlientGrid" Grid.Row="1"  Grid.Column="1" HorizontalGridLinesBrush="LightGray" VerticalGridLinesBrush="LightGray"
+                  AutoGenerateColumns="False"
+                  TextBlock.TextAlignment="Left" IsReadOnly="True" Margin="19,68,17,48" SelectionChanged="СlientGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding Path=FIO}" Width="350"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding Path=Phone}" Width="300" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

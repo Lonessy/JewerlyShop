@@ -1,0 +1,97 @@
+﻿<Window x:Class="JewerlyShop.MainWindow" Icon="Resources\icon.ico"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JewerlyShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Главная" Height="600" Width="850" FontFamily="Arial Black" Foreground="White" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="305*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="363*"/>
+            <RowDefinition Height="45*"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Column="1" Background="#708090"></Grid>
+        <Grid  Grid.Column="0" Background="#708090"></Grid>
+        <Grid Grid.Column="0" Grid.Row="1" Background="#e3e7e8"></Grid>
+        <TextBlock Text="Jewerly" Grid.Column="0" FontSize="30" HorizontalAlignment="Center" Margin="0 15 0 0"></TextBlock>
+        <TextBlock Text="Главная" Grid.Column="1" FontSize="30" HorizontalAlignment="Center" Margin="0 15 0 0"></TextBlock>
+        <Grid  Grid.Row="2" Grid.Column="0" Background="#708090"></Grid>
+        <Grid  Grid.Row="2" Grid.Column="1" Background="#708090"></Grid>
+        <Image Grid.Column="1" Source="Resources\logo.png" Width="418" HorizontalAlignment="Center"  Grid.Row="1"/>
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button x:Name="ProductsBtn" Width="180" Height="40" Margin="0 25 0 0" Content="Товары" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="ProductsBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ProvidersBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Поставщики" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="ProvidersBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ClientsBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Клиенты" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="ClientsBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="SalesBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Продажи" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="SalesBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="Reference"  Width="180" Height="40" Margin="0 30 0 0" Content="Справка" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="Reference_Click" >
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button x:Name="ExitBtn" Width="180" Height="40" Margin="0 30 0 0" Content="Выход" FontSize="15" HorizontalAlignment="Center" Foreground="White" Click="ExitBtn_Click">
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                          HorizontalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
